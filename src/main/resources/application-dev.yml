@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+# 应用名称
+spring:
+  application:
+    name: analysis
+
+  jackson:
+    date-format: yyyy-MM-dd HH-mm-ss
+    time-zone: GMT+8
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: zg448866
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/goods_analysis?allowMultiQueries=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/*.xml
+
+community:
+  path:
+    excel: D:\downLoad\excel\
+
+
+logging:
+  level:
+    root: info
+
